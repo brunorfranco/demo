@@ -16,3 +16,23 @@ application.properties
 RestController example - talk about the annotation
  
 http://localhost:9090/reservations
+
+@RepositoryRestResource and @Param("rn")
+
+http://localhost:9090/reservations?page=1
+
+http://localhost:9090/reservations/search/findByReservationName?rn=Bruno
+
+implements ResourceProcessor
+
+http://localhost:9090/reservations/search/findByReservationName?rn=Bruno
+
+@Controller ReservationMvcController - Discuss ViewResolver
+
+thymeleaf template
+
+http://localhost:9090/metrics
+http://localhost:9090/dump
+http://localhost:9090/mappings
+
+pom.xml change Servlet container <artifactId>spring-boot-starter-jetty</artifactId>

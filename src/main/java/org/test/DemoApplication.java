@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.test.entity.Reservation;
-import org.test.repository.ReservationRepository;
+import org.test.repository.ReservationRepositoryNewAnnotation;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -17,7 +17,7 @@ public class DemoApplication {
 	}
 	
 	@Bean
-	CommandLineRunner runner(ReservationRepository rr){
+	CommandLineRunner runner(ReservationRepositoryNewAnnotation rr){
 		return args -> {
 			Arrays.asList("Les,Josh,Phil,Sasha,Bruno,Vinicius".split(","))
 			.forEach(n -> rr.save(new Reservation(n)));
